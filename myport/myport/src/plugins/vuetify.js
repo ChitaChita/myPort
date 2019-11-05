@@ -1,3 +1,4 @@
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
 import Vue from 'vue';
 import Vuetify from 'vuetify/lib';
 
@@ -7,9 +8,9 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#ee44aa',
-        secondary: '#424242',
-        accent: '#82B1FF',
+        primary: '#FBC02D',
+        secondary: '#F57F17',
+        accent: '#64DD17',
         error: '#FF5252',
         info: '#2196F3',
         success: '#4CAF50',
