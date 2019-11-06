@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-layout
       text-center
       wrap
@@ -13,20 +13,27 @@
         mb-5
         xs12
       >
-        <h2 class="headline font-weight-bold mb-3">Used Flameworks 1.vue.js 2.ruby on rails</h2>
-
-
-        <v-layout justify-center>
-          <a
-            v-for="(eco, i) in ecosystem"
-            :key="i"
-            :href="eco.href"
-            class="subheading mx-3"
-            target="_blank"
-          >
-            {{ eco.text }}
-          </a>
-        </v-layout>
+        <h2 class="headline font-weight-bold mb-3">Used  Flameworks  My  Products</h2>
+      </v-flex>
+    </v-layout>
+    <v-layout
+      text-center
+    >
+      <v-flex>
+        <v-card
+          class="pa-2"
+          outlined
+          style="background-color: beige;"
+          tile
+          v-for="(eco, i) in ecosystem"
+          :key="i"
+          :href="eco.href"
+          target="_blank"
+        >
+          {{ eco.text }} <br>
+          <v-icon>{{ eco.icon }}</v-icon><br>
+          {{ eco.note }}
+        </v-card>
       </v-flex>
     </v-layout>
   </v-container>
@@ -38,10 +45,14 @@ export default {
       {
         text: '1.vue-slot-app',
         href: 'https://chitachita.github.io/vue-slot-app/#/',
+        icon: 'mdi-vuejs',
+        note: 'Vue.js + Vuex + Vuerouter',
       },
       {
         text: '2.honda-survey',
         href: 'https://honda-survey.herokuapp.com',
+        icon: 'mdi-language-ruby-on-rails',
+        note: 'Ruby on rails + Chart.js',
       },
     ],
     

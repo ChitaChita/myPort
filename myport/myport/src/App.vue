@@ -44,42 +44,51 @@
     <v-app-bar color="primary" light app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title 
-      class="headline 
+      class="headline
       text-uppercase">
         <span>Menu</span>
         <span class="font-weight-light"> ICONS</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        to="/"
-      >
-        <span class="mr-2">Home</span>
-      </v-btn>
-      <v-btn
-        text
-        to="/about"
-      >
-        <span class="mr-2">About</span>
-      </v-btn>
-      <v-btn
-        text
-        to="/works"
-      >
-        <span class="mr-2">Works</span>
-      </v-btn>
-      <v-btn
-        text
-        to="/contact"
-      >
-        <span class="mr-2">Contact</span>
-      </v-btn>
+      <v-toolbar-items>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/"
+        >
+          <span class="mr-2">Home</span>
+        </v-btn>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/about"
+        >
+          <span class="mr-2">About</span>
+        </v-btn>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/works"
+        >
+          <span class="mr-2">Works</span>
+        </v-btn>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/contact"
+        >
+          <span class="mr-2">Contact</span>
+        </v-btn>
+      </v-toolbar-items>
     </v-app-bar>
+    <!-- メインコンテンツ -->
     <v-content>
       <router-view />
     </v-content>
+    <!-- フッター部分 -->
     <v-footer color="secondary" light app>
-      Chita's
+      <div class="flex-grow-1"></div>
+      <div>&copy; 2018 - {{ new Date().getFullYear() }} written by Chita</div>
     </v-footer>
   </v-app>
 </template>
