@@ -1,15 +1,20 @@
 <template>
-  <v-container class="grey lighten-5">
-      <v-layout
-      text-center
-      justify-center
-      wrap
+  <v-container
+    fluid
+    fill-height
+    class="grey lighten-5"
+  >
+    <v-spacer></v-spacer>
+    <v-row
+    justify="center"
+    align="center"
+    wrap
     >
-      <v-flex mb-4>
+      <v-col class="mb-4">
         <h1 class="display-3 font-weight-bold xs-12">
           Welcome to Chita's Portfolio
         </h1>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-container>  
 </template>

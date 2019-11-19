@@ -11,5 +11,19 @@
       </v-flex>
 
     </v-layout>
+    <PersonalHistory />
   </v-container>
 </template>
+
+<script>
+import PersonalHistory from '@/components/PersonalHistory';
+
+export default {
+  components: {
+    PersonalHistory,
+  },
+  data: () => ({
+    //
+  }),
+};
+</script>

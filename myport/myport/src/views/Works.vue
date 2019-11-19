@@ -1,39 +1,34 @@
 <template>
   <v-container fluid>
-    <v-layout
-      text-center
-      wrap
-    >
+    <v-layout text-center wrap>
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
           Works
         </h1>
       </v-flex>
-      <v-flex
-        mb-5
-        xs12
-      >
-        <h2 class="headline font-weight-bold mb-3">Used  Flameworks  My  Products</h2>
+      <v-flex mb-5 xs12>
+        <h2 class="headline font-weight-bold mb-3">Used  Flamework  My  Products</h2>
       </v-flex>
-    </v-layout>
-    <v-layout
-      text-center
-    >
       <v-flex>
-        <v-card
-          class="pa-2"
-          outlined
-          style="background-color: beige;"
-          tile
-          v-for="(eco, i) in ecosystem"
-          :key="i"
-          :href="eco.href"
-          target="_blank"
-        >
-          {{ eco.text }} <br>
-          <v-icon>{{ eco.icon }}</v-icon><br>
-          {{ eco.note }}
-        </v-card>
+        <v-row style="height:200px;" justify="center" align-content="center">
+          <v-col cols=12 sm=10 md=8 lg=4 xl=3>
+            <v-card
+              class="pa-2"
+              outlined
+              style="background-color: beige;"
+              tile
+              v-for="(eco, i) in ecosystem"
+              :key="i"
+              :href="eco.href"
+              target="_blank"
+            >
+              {{ eco.text }} <br>
+              <v-icon>{{ eco.icon }}</v-icon><br>
+              {{ eco.note }}
+            </v-card>
+            <v-spacer></v-spacer>
+          </v-col>
+        </v-row>
       </v-flex>
     </v-layout>
   </v-container>
