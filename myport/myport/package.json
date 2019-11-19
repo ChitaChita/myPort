@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "deploy": "gh-pages -d docs",
+>>>>>>> e26345b... build deploy
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
