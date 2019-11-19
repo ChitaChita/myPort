@@ -1,5 +1,7 @@
 module.exports = {
-  // options...
+  outputDir: 'docs',
+  assetsDir: './',
+  publicPath: './',
   devServer: {
       watchOptions: {
         ignored: /node_modules/,
