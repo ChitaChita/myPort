@@ -1,32 +1,105 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app class="app">
+    <!-- ハンバーガーメニュー -->
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+      <v-list dense>
+        <v-list-item to="/" link>
+          <v-list-item-action>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>HOME</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/about" link>
+          <v-list-item-action>
+            <v-icon> mdi-account-card-details-outline</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>ABOUT</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/works" link>
+          <v-list-item-action>
+            <v-icon>mdi-tools</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>WORKS</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/contact" link>
+          <v-list-item-action>
+            <v-icon>mdi-contact-mail</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>CONTACT</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <!-- トップメニュー -->
+    <v-app-bar color="primary" light app>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-toolbar-title 
+      class="headline
+      text-uppercase">
+        <span>Menu</span>
+        <span class="font-weight-light"> ICONS</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/"
+        >
+          <span class="mr-2">Home</span>
+        </v-btn>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/about"
+        >
+          <span class="mr-2">About</span>
+        </v-btn>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/works"
+        >
+          <span class="mr-2">Works</span>
+        </v-btn>
+        <v-btn
+          class="hidden-sm-and-down"
+          text
+          to="/contact"
+        >
+          <span class="mr-2">Contact</span>
+        </v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+    <!-- メインコンテンツ -->
+    <v-content>
+      <router-view />
+    </v-content>
+    <!-- フッター部分 -->
+    <v-footer color="secondary" light app>
+      <div class="flex-grow-1"></div>
+      <div>&copy; 2018 - {{ new Date().getFullYear() }} written by Chita</div>
+    </v-footer>
+  </v-app>
 </template>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<script>
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      // ハンバーガーメニュー
+      drawer: null,
+    }),
+  }
+</script>
