@@ -4,11 +4,12 @@ import Home from '@/views/Home.vue'
 import About from '@/views/About.vue'
 import Works from '@/views/Works.vue'
 import Contact from '@/views/Contact.vue'
+import NotFound from '@/views/404.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/myPort',
     name: 'Home',
     component: Home
   },
@@ -26,6 +27,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: NotFound
   }
 ]
 

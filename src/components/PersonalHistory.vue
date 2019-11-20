@@ -20,6 +20,7 @@
               </v-card-title>
               {{ eco.text }} <br>
             </v-card>
+            <v-spacer></v-spacer>
           </v-col>
         </v-row>
       </v-flex>
@@ -37,13 +38,18 @@ export default {
       },
       {
         title: '職歴',
-        text: '営業、事務',
+        text: '営業,事務,警備員',
         icon: 'mdi-account-details',
       },
       {
         title: 'web開発スキル',
         text: 'HTML5, CSS3, JavaScript, Ruby, PHP',
         icon: 'mdi-file-code-outline',
+      },
+      {
+        title: '名刺代わりの小説',
+        text: '米澤穂信:犬はどこだ,愚者のエンドロール 北村薫:夜の蟬,六の宮の姫君 京極夏彦:塗仏の宴',
+        icon: 'mdi-book-open-page-variant',
       },
       // {
       //   text: '学習中スキル',

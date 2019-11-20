@@ -1,20 +1,17 @@
 <template>
-  <v-container
-    fluid
-    fill-height
-    class="grey lighten-5"
-  >
-    <v-spacer></v-spacer>
-    <v-row
-    justify="center"
-    align="center"
-    wrap
-    >
-      <v-col class="mb-4">
-        <h1 class="display-3 font-weight-bold xs-12">
-          Welcome to Chita's Portfolio
-        </h1>
-      </v-col>
-    </v-row>
-  </v-container>  
+<v-container fluid>
+  <v-layout text-center wrap>
+    <v-flex mb-4>
+      <v-row style="height:450px;" justify="center" align-content="center">
+        <v-col cols=12 sm=10 md=8 lg=4 xl=3>
+          <h1 class="pt-5 ma-auto display-3 font-weight-bold text-lg-right">
+            Welcome to Chita's Portfolio Site
+          </h1>
+          <v-spacer></v-spacer>
+          <h3 class="pt-5 ma-auto headline font-weight-bold">いらっしゃいませ！</h3>
+        </v-col>
+      </v-row>
+    </v-flex>
+  </v-layout>
+</v-container>  
 </template>

@@ -6,7 +6,7 @@
       app
     >
       <v-list dense>
-        <v-list-item to="/" link>
+        <v-list-item to="/myPort" link>
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -54,7 +54,7 @@
         <v-btn
           class="hidden-sm-and-down"
           text
-          to="/"
+          to="/myPort"
         >
           <span class="mr-2">Home</span>
         </v-btn>
