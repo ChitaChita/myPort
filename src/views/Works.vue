@@ -24,9 +24,11 @@
             :href="eco.href"
             target="_blank"
           >
-            {{i+1}}.{{ eco.text }} <br>
-            <v-icon>{{ eco.icon1 }}</v-icon>
-            <v-icon>{{ eco.icon2 }}</v-icon><br>
+            <v-card-title primary-title class="justify-center">
+              <v-icon>{{ eco.icon1 }}</v-icon>
+              <v-icon>{{ eco.icon2 }}</v-icon>
+              {{i+1}}.{{ eco.text }}
+            </v-card-title>
             {{ eco.note }}<br>
             URL: {{ eco.link }}
           </v-card>
@@ -46,7 +48,7 @@ export default {
         href: 'https://chitachita.github.io/vue-slot-app/#/',
         icon1: 'mdi-vuejs',
         icon2: '',
-        note: 'Vue.jsにてVuerouter,Vuexを使用した簡単なゲームアプリ 個人制作',
+        note: 'Vue.jsにてVuerouter,Vuexを使用した簡単なゲームアプリ',
         link: 'https://chitachita.github.io/vue-slot-app/#/',
       },
       {
@@ -59,11 +61,11 @@ export default {
       },
       {
         text: 'Life_log (チーム制作)',
-        href: '#',
+        href: '',
         icon1: 'mdi-language-ruby-on-rails',
         icon2: 'mdi-vuejs',
         note: 'Ruby on railsとVue.jsを使用し、日常の記録を管理、分析をするアプリ',
-        link: 'in preparation',
+        link: '準備中',
       },
     ],
     
