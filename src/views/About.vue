@@ -1,18 +1,16 @@
 <template>
-  <v-container>
-    <v-layout
-      text-center
-      wrap
-    >
-      <v-flex mb-4>
-        <h1 class="display-2 font-weight-bold mb-3">
-          About
-        </h1>
-      </v-flex>
+<v-container fluid>
+  <v-layout text-center wrap>
+    <v-flex mb-4 xs12>
+      <h1 class="display-2 font-weight-bold mb-3">
+        About
+      </h1>
+    <h3 class="headline font-weight-bold mb-3">カンタンな履歴</h3>
+    </v-flex>
 
-    </v-layout>
-    <PersonalHistory />
-  </v-container>
+  </v-layout>
+  <PersonalHistory />
+</v-container>
 </template>
 
 <script>

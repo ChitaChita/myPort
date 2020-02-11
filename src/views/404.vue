@@ -4,7 +4,7 @@
   fill-height
   class="grey lighten-5"
 >
-  <v-spacer></v-spacer>
+  <v-spacer />
   <v-row
   justify="center"
   align="center"

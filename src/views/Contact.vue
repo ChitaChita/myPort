@@ -7,16 +7,13 @@
       </h1>
       <h3 class="headline font-weight-bold mb-3">連絡先</h3>
     </v-flex>
-    <v-flex mb-5 xs12>
+    <v-flex mb-4 xs12>
       <v-row style="height:200px;" justify="center" align-content="center">
-        <v-col cols=12 sm=10 md=8 lg=4 xl=3>
+        <v-col v-for="(eco, i) in ecosystem" :key="i" cols=12 sm=10 md=8 lg=4 xl=3>
           <v-card
             class="pa-2"
-            outlined
+            elevation="5"
             style="background-color: beige;"
-            tile
-            v-for="(eco, i) in ecosystem"
-            :key="i"
             :href="eco.href"
             target="_blank"
           >

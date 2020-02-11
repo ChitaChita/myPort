@@ -33,12 +33,12 @@ const routes = [
     name: 'NotFound',
     component: NotFound
   }
-]
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;
