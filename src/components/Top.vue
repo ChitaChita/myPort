@@ -1,9 +1,5 @@
 <template>
-<v-container
-  fluid
-  fill-height
-  class="grey lighten-5"
->
+<v-container fluid>
   <v-layout text-center wrap>
     <v-flex mb-4>
       <v-row style="height:450px;" justify="center" align-content="center">

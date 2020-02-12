@@ -4,11 +4,10 @@
   <v-navigation-drawer
     v-model="drawer"
     app
-    absolute
     temporary
   >
     <v-list dense>
-      <v-list-item to="/myPort" link>
+      <v-list-item to="/myPort" link @click="onEnter">
         <v-list-item-action>
           <v-icon>mdi-home</v-icon>
         </v-list-item-action>
@@ -16,7 +15,7 @@
           <v-list-item-title>HOME</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item to="/about" link>
+      <v-list-item to="/about" link @click="onEnter">
         <v-list-item-action>
           <v-icon> mdi-account-card-details-outline</v-icon>
         </v-list-item-action>
@@ -24,7 +23,7 @@
           <v-list-item-title>ABOUT</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item to="/works" link>
+      <v-list-item to="/works" link @click="onEnter">
         <v-list-item-action>
           <v-icon>mdi-tools</v-icon>
         </v-list-item-action>
@@ -32,7 +31,7 @@
           <v-list-item-title>WORKS</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-      <v-list-item to="/contact" link>
+      <v-list-item to="/contact" link @click="onEnter">
         <v-list-item-action>
           <v-icon>mdi-contact-mail</v-icon>
         </v-list-item-action>
@@ -57,6 +56,7 @@
         class="hidden-sm-and-down"
         text
         to="/myPort"
+        @click="onEnter"
       >
         <span class="mr-2">Home</span>
       </v-btn>
@@ -64,20 +64,23 @@
         class="hidden-sm-and-down"
         text
         to="/about"
+        @click="onEnter"
       >
         <span class="mr-2">About</span>
       </v-btn>
       <v-btn
         class="hidden-sm-and-down"
         text
-        to="/works"
+        to="/works" 
+        @click="onEnter"
       >
         <span class="mr-2">Works</span>
       </v-btn>
       <v-btn
         class="hidden-sm-and-down"
         text
-        to="/contact"
+        to="/contact" 
+        @click="onEnter"
       >
         <span class="mr-2">Contact</span>
       </v-btn>
@@ -86,10 +89,24 @@
   <!-- メインコンテンツ -->
   <div class="section1">
   <v-content transition="slide-x-transition">
-    <router-view />
+    <router-view></router-view>
   </v-content>
   </div>
-  <div class="section2"></div>
+  <div class="section2">
+    <v-content transition="slide-x-transition">
+    <router-view name="a"></router-view>
+  </v-content>
+  </div>
+  <div class="section1">
+  <v-content transition="slide-x-transition">
+    <router-view name="b"></router-view>
+  </v-content>
+  </div>
+  <div class="section2">
+    <v-content transition="slide-x-transition">
+    <router-view name="c"></router-view>
+  </v-content>
+  </div>
   <!-- フッター部分 -->
   <v-footer color="secondary" light app>
     <div class="flex-grow-1"></div>
@@ -106,6 +123,11 @@ export default {
     // ハンバーガーメニュー
     drawer: null,
   }),
+  methods: {
+    onEnter() {
+      window.scroll(0, 0);
+    }
+    },
 }
 </script>
 <style scoped>
@@ -115,7 +137,7 @@ export default {
 }
  
 .section1 {
-  background:pink;
+  background:#F9EFF1;
 }
 .section2 {
   position: relative;
@@ -133,15 +155,4 @@ export default {
   height:100%;
   background:#fff;
 }
-/* .bgImg {
-  background: #6292f1;
-  position: absolute;
-  transform: skewY(-5deg);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -100;
-  -webkit-transform: skewY(-5deg);
-} */
 </style>

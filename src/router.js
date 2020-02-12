@@ -10,8 +10,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/myPort',
-    name: 'Home',
-    component: Home
+    components: {
+      default: Home,
+      a: About,
+      b: Works,
+      c: Contact,
+    }
   },
   {
     path: '/about',
