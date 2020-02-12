@@ -12,7 +12,7 @@
         cols=12 sm=10 md=8 lg=4 xl=3>
           <v-card
             class="persona"
-            style="background-color: beige;"
+            style="background-color: beige; white-space: pre-line;"
             elevation="5"
             target="_blank"
           >
@@ -62,8 +62,3 @@ export default {
   }),
 };
 </script>
-<style scoped>
-.persona {
-  white-space: pre;
-}
-</style>

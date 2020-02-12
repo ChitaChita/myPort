@@ -84,9 +84,12 @@
     </v-toolbar-items>
   </v-app-bar>
   <!-- メインコンテンツ -->
+  <div class="section1">
   <v-content transition="slide-x-transition">
     <router-view />
   </v-content>
+  </div>
+  <div class="section2"></div>
   <!-- フッター部分 -->
   <v-footer color="secondary" light app>
     <div class="flex-grow-1"></div>
@@ -105,3 +108,40 @@ export default {
   }),
 }
 </script>
+<style scoped>
+.section1,
+.section2{
+  padding: 50px 30px;
+}
+ 
+.section1 {
+  background:pink;
+}
+.section2 {
+  position: relative;
+  z-index: 0;
+}
+.section2::after{
+  content: '';
+  position: absolute;
+  left:0;
+  top: 0;
+  transform: skewY(-5deg);
+  transform-origin: bottom left;
+  z-index: -1;
+  width:100%;
+  height:100%;
+  background:#fff;
+}
+/* .bgImg {
+  background: #6292f1;
+  position: absolute;
+  transform: skewY(-5deg);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+  -webkit-transform: skewY(-5deg);
+} */
+</style>

@@ -18,7 +18,7 @@
             :href="eco.href"
             class="works"
             elevation="3"
-            style="background-color: beige;"
+            style="background-color: beige; white-space: pre-line;"
             target="_blank"
           >
             <v-card-title primary-title class="justify-center">
@@ -68,8 +68,3 @@ export default {
   }),
 };
 </script>
-<style scoped>
-.works {
-  white-space: pre;
-}
-</style>
