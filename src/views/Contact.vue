@@ -16,6 +16,7 @@
             style="background-color: beige;"
             :href="eco.href"
             target="_blank"
+            rel="noopener"
           >
             <v-card-title class="justify-center">
               <v-icon large color="secondary">{{ eco.icon }}</v-icon>

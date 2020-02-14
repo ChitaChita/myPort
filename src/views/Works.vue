@@ -22,6 +22,7 @@
             elevation="5"
             style="background-color: beige; white-space: pre-line;"
             target="_blank"
+            rel="noopener"
           >
             <v-card-title class="text--primary justify-center font-weight-bold">
               <v-icon large color="secondary">{{ eco.icon1 }}</v-icon>
