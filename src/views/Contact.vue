@@ -1,24 +1,30 @@
 <template>
-<v-container fluid>
-  <v-layout text-center wrap>
-    <v-flex mb-4>
+<v-container class="fluid">
+  <v-layout class="text-center wrap">
+    <v-flex class="mb-4">
       <h1 class="display-2 font-weight-bold mb-3">
         Contact
       </h1>
       <h3 class="headline font-weight-bold mb-3">連絡先</h3>
     </v-flex>
-    <v-flex mb-4 xs12>
+    <v-flex class="mb-4 xs12">
       <v-row style="height:200px;" justify="center" align-content="center">
-        <v-col v-for="(eco, i) in ecosystem" :key="i" cols=12 sm=10 md=8 lg=4 xl=3>
+        <v-col v-for="(eco, i) in ecosystem" :key="i" cols=12 sm=10 md=8 lg=4 xl=2>
           <v-card
-            class="pa-2"
+            class="mx-auto"
             elevation="5"
             style="background-color: beige;"
             :href="eco.href"
             target="_blank"
           >
-            <v-icon>{{ eco.icon }}</v-icon>
-            {{ eco.text }}
+            <v-card-title class="justify-center">
+              <v-icon large color="secondary">{{ eco.icon }}</v-icon>
+            </v-card-title>
+            <v-card-text>
+              <div class="text--primary">
+                {{ eco.text }}
+              </div>
+            </v-card-text>
           </v-card>
         </v-col>
       </v-row>

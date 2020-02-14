@@ -9,7 +9,7 @@
     <v-list dense>
       <v-list-item to="/myPort" link @click="onEnter">
         <v-list-item-action>
-          <v-icon>mdi-home</v-icon>
+          <v-icon large color="secondary">mdi-home</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>HOME</v-list-item-title>
@@ -17,7 +17,7 @@
       </v-list-item>
       <v-list-item to="/about" link @click="onEnter">
         <v-list-item-action>
-          <v-icon> mdi-account-card-details-outline</v-icon>
+          <v-icon large color="secondary"> mdi-account-card-details-outline</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>ABOUT</v-list-item-title>
@@ -25,7 +25,7 @@
       </v-list-item>
       <v-list-item to="/works" link @click="onEnter">
         <v-list-item-action>
-          <v-icon>mdi-tools</v-icon>
+          <v-icon large color="secondary">mdi-tools</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>WORKS</v-list-item-title>
@@ -33,7 +33,7 @@
       </v-list-item>
       <v-list-item to="/contact" link @click="onEnter">
         <v-list-item-action>
-          <v-icon>mdi-contact-mail</v-icon>
+          <v-icon large color="secondary">mdi-contact-mail</v-icon>
         </v-list-item-action>
         <v-list-item-content>
           <v-list-item-title>CONTACT</v-list-item-title>
@@ -88,22 +88,22 @@
   </v-app-bar>
   <!-- メインコンテンツ -->
   <div class="section1">
-  <v-content transition="slide-x-transition">
+  <v-content transition="scale-transition">
     <router-view></router-view>
   </v-content>
   </div>
   <div class="section2">
-    <v-content transition="slide-x-transition">
+    <v-content transition="scale-transition">
     <router-view name="a"></router-view>
   </v-content>
   </div>
   <div class="section1">
-  <v-content transition="slide-x-transition">
+  <v-content transition="scale-transition">
     <router-view name="b"></router-view>
   </v-content>
   </div>
   <div class="section2">
-    <v-content transition="slide-x-transition">
+    <v-content transition="scale-transition">
     <router-view name="c"></router-view>
   </v-content>
   </div>
@@ -133,7 +133,7 @@ export default {
 <style scoped>
 .section1,
 .section2{
-  padding: 50px 30px;
+  padding: 80px 30px;
 }
  
 .section1 {
@@ -143,7 +143,7 @@ export default {
   position: relative;
   z-index: 0;
 }
-.section2::after{
+.section2:after{
   content: '';
   position: absolute;
   left:0;
@@ -151,8 +151,8 @@ export default {
   transform: skewY(-5deg);
   transform-origin: bottom left;
   z-index: -1;
-  width:100%;
-  height:100%;
+  width:120%;
+  height:120%;
   background:#fff;
 }
 </style>
